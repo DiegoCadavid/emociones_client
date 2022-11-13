@@ -6,6 +6,10 @@
   .btn {
     @apply py-2 px-4 rounded-lg border-4 border-primary-100 font-title capitalize text-primary-100 dark:text-zinc-100 dark:shadow-zinc-100 dark:border-zinc-100 shadow-primary hover:shadow-primary-min hover:translate-y-shadow-min hover:cursor-pointer active:shadow-none active:translate-y-shadow disabled:cursor-not-allowed transition-all ease-out
   }
+  
+  .brd {
+    @apply border-4 rounded-lg border-primary-100 shadow-primary bg-zinc-50 dark:border-zinc-100 dark:bg-zinc-800 dark:shadow-zinc-100 dark:text-zinc-100
+  }
 }
 
 .noscroll {
