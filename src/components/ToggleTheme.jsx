@@ -4,17 +4,19 @@ const ToggleTheme = ({
   isDarkMode = false,
   toggleDarkMode = () => {},
   handleLogout = () => {},
+  isAuth = false,
 }) => {
   return (
     <div className="absolute right-5 top-5 flex gap-2 items-center">
-      <button
-        className="btn"
-        onClick={() => {
-          handleLogout();
-        }}>
-        Cerrar sesion
-      </button>
-
+      {isAuth && (
+        <button
+          className="btn"
+          onClick={() => {
+            handleLogout();
+          }}>
+          Cerrar sesion
+        </button>
+      )}
       <button
         className="btn"
         onClick={() => {

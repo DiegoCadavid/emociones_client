@@ -48,6 +48,7 @@ const App = () => {
     <div className={`min-h-screen dark:bg-zinc-900 transition-colors ease-in`}>
       <ToggleTheme
         isDarkMode={isDarkMode}
+        isAuth={isAuth}
         toggleDarkMode={toggleDarkMode}
         handleLogout={logout}
       />
