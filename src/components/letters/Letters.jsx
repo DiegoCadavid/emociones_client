@@ -26,7 +26,7 @@ const Letters = () => {
   }
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 px-3 md:px-0">
 
       {/* Modal de creacion */}
       { showWriteModal && <LettersWriteModal handleCloseModal={handleCloseModal} />}
@@ -34,7 +34,7 @@ const Letters = () => {
       <Title
         title="Cartas"
         subtitle={
-          "Muchas de mis emociones que senti/siento por ti se convierten en palabras \n que se perdieron en el tiempo, quiero evitar ello y por eso cree existe esta seccion \n que se basa en la recopilacion de esas palabras. \n (tu tambien podras escribirme ^^)"
+          "Muchas de mis emociones que senti/siento por ti se \n convierten en palabras que se perdieron en el tiempo, quiero \n evitar ello y por eso  cree existe esta seccion que se basa \n en la recopilacion de esas palabras. \n (tu tambien podras escribirme ^^)"
         }
       />
       <LettersMenu handleOpenModal={handleOpenModal} />

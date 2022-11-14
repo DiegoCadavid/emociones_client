@@ -28,7 +28,8 @@ module.exports = {
         "shadow-min" : "4px"
       },
       fontSize: {
-        title: "6rem"
+        title: "6rem",
+        "title-mobile": "4rem"
       },
       gridTemplateColumns: {
         "images-container" : " repeat(auto-fit, minmax(370px, 1fr))"

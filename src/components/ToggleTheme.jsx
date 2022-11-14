@@ -7,10 +7,10 @@ const ToggleTheme = ({
   isAuth = false,
 }) => {
   return (
-    <div className="absolute right-5 top-5 z-10 flex gap-2 items-center">
+    <div className="absolute inset-x-2 top-2 md:left-0 md:right-5 md:top-5 z-10 flex gap-2 items-center justify-center md:justify-end">
       {isAuth && (
         <button
-          className="btn"
+          className="btn w-full md:w-fit"
           onClick={() => {
             handleLogout();
           }}>

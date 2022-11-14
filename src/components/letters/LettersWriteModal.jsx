@@ -31,10 +31,10 @@ const LettersWriteModal = ({ handleCloseModal }) => {
           type: "spring",
           bounce: 0.5,
         }}
-        className="absolute inset-0 flex justify-center items-center z-50">
-        <div className="brd p-5">
+        className="absolute inset-0 p-5 flex justify-center items-center z-50">
+        <div className="brd w-full md:w-96 p-5">
           <form
-            className="w-96 flex flex-col gap-5"
+            className="w-full  flex flex-col gap-5"
             onSubmit={handleSubmit(onSubmit)}>
             <div>
               {errors.title && (

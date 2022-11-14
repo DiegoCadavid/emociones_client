@@ -38,10 +38,10 @@ export const ImagesUploadModal = ({ handleCloseModal }) => {
         duration: 0.45,
         type: "spring",
         bounce: 0.5
-      }} className="absolute inset-0 z-50 flex items-center justify-center">
-        <div className="relative brd p-4 pb-7">
+      }} className="absolute inset-0 z-50 p-5 flex items-center justify-center">
+        <div className="relative brd w-full md:w-96 p-4 pb-7">
           <form
-            className="flex flex-col gap-5"
+            className="flex flex-col w-full gap-5"
             onSubmit={handleSubmit(onSubmit)}>
             <div>
               {errors.body && (
@@ -49,7 +49,7 @@ export const ImagesUploadModal = ({ handleCloseModal }) => {
               )}
               <textarea
                 placeholder="Informacion de la imagen"
-                className="p-2 w-96 brd"
+                className="p-2 w-full brd"
                 {...register("body", { required: true })}></textarea>
             </div>
 

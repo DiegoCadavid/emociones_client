@@ -28,7 +28,7 @@ const Images = () => {
   };
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 p-3 md:p-0">
       {/* Upload modal */}
       {showUploadModal && <ImagesUploadModal handleCloseModal={handleCloseModal}/>}
 
