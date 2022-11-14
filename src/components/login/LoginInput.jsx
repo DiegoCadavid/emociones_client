@@ -10,7 +10,7 @@ const LoginInput = () => {
         <input
           type="text"
           placeholder="####"
-          className="bg-transparent border-4 border-primary-100 shadow-primary py-2 rounded-lg px-4 outline-none text-center font-title placeholder:text-primary-50 text-primary-100 dark:border-zinc-100 dark:shadow-zinc-100 dark:text-zinc-100 dark:placeholder:text-zinc-400"
+          className="brd bg-transparent py-2 px-4 outline-none text-center font-title placeholder:text-primary-50 text-primary-100  dark:text-zinc-100 dark:placeholder:text-zinc-400"
         />
         <button
           type="button"
