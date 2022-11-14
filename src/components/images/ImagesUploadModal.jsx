@@ -32,7 +32,7 @@ export const ImagesUploadModal = ({ handleCloseModal }) => {
       <BackgroundBlur />
       <NoScroll />
       <div className="absolute inset-0 z-50 flex items-center justify-center">
-        <div className="relative bg-zinc-100 p-5 rounded-lg border-4 border-primary-100 dark:bg-zinc-800 dark:border-zinc-100 shadow-primary dark:shadow-zinc-100">
+        <div className="relative brd p-4 pb-7">
           <form
             className="flex flex-col gap-5"
             onSubmit={handleSubmit(onSubmit)}>
@@ -42,7 +42,7 @@ export const ImagesUploadModal = ({ handleCloseModal }) => {
               )}
               <textarea
                 placeholder="Informacion de la imagen"
-                className="border-4 rounded-lg p-2 w-96 border-primary-100 outline-none resize-y shadow-primary dark:bg-zinc-800 dark:border-zinc-100 dark:shadow-zinc-100 dark:text-zinc-100"
+                className="p-2 w-96 brd"
                 {...register("body", { required: true })}></textarea>
             </div>
 
