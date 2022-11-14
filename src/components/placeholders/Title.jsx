@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Title = ({ title = "titulo", subtitle = "" }) => {
   return (
-    <div className="text-center flex flex-col gap-3 items-center mt-8 md:mt-12">
+    <div className="text-center flex flex-col gap-3 items-center mt-8 md:mt-0 md:pt-12">
       <div>
         <h2 className="text-primary-100 font-title text-3xl uppercase dark:text-zinc-100">
           {title}
