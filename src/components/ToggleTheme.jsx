@@ -7,7 +7,7 @@ const ToggleTheme = ({
   isAuth = false,
 }) => {
   return (
-    <div className="absolute right-5 top-5 flex gap-2 items-center">
+    <div className="absolute right-5 top-5 z-10 flex gap-2 items-center">
       {isAuth && (
         <button
           className="btn"

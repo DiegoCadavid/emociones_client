@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { motion } from 'framer-motion'
 
 import BackgroundBlur from "../placeholders/BackgroundBlur";
 import NoScroll from "../placeholders/NoScroll";
 import ImagesDropzone from "./ImagesDropzone";
+
+import modalVariant from '../transition/modalVariant'
 
 export const ImagesUploadModal = ({ handleCloseModal }) => {
   const {
@@ -31,7 +34,11 @@ export const ImagesUploadModal = ({ handleCloseModal }) => {
       {/* Backgroud */}
       <BackgroundBlur />
       <NoScroll />
-      <div className="absolute inset-0 z-50 flex items-center justify-center">
+      <motion.div initial="initial" animate="entry" variants={modalVariant} transition={{
+        duration: 0.45,
+        type: "spring",
+        bounce: 0.5
+      }} className="absolute inset-0 z-50 flex items-center justify-center">
         <div className="relative brd p-4 pb-7">
           <form
             className="flex flex-col gap-5"
@@ -70,7 +77,7 @@ export const ImagesUploadModal = ({ handleCloseModal }) => {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import Title from "../placeholders/Title";
 import getImages from "./getImages";
 import ImagesContainer from "./ImagesContainer";

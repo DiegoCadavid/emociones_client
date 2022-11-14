@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+
 import authContext from "../contexts/authContext";
 import themeContext from "../contexts/themeContext";
 import ToggleTheme from "./ToggleTheme";
+import Transition from "./transition/Transition";
 
 const App = () => {
   const navigate = useNavigate();
@@ -45,22 +48,25 @@ const App = () => {
   };
 
   return (
-    <div className={`min-h-screen dark:bg-zinc-900 transition-colors ease-in`}>
+    <div className={`min-h-screen  dark:bg-zinc-900 transition-colors ease-in`}>
       <ToggleTheme
         isDarkMode={isDarkMode}
         isAuth={isAuth}
         toggleDarkMode={toggleDarkMode}
         handleLogout={logout}
       />
-      <themeContext.Provider value={{
-        isDarkTheme: isDarkMode
-      }}>
+      <themeContext.Provider
+        value={{
+          isDarkTheme: isDarkMode,
+        }}>
         <authContext.Provider
           value={{
             login,
             isAuth,
           }}>
-          <Outlet />
+          <Transition>
+            <Outlet />
+          </Transition>
         </authContext.Provider>
       </themeContext.Provider>
     </div>

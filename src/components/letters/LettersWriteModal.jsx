@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 
+import modalVariant from "../transition/modalVariant";
 import BackgroundBlur from "../placeholders/BackgroundBlur";
 import NoScroll from "../placeholders/NoScroll";
 
@@ -20,7 +22,16 @@ const LettersWriteModal = ({ handleCloseModal }) => {
     <>
       <BackgroundBlur />
       <NoScroll />
-      <div className="absolute inset-0 flex justify-center items-center z-50">
+      <motion.div
+        initial="initial"
+        animate="entry"
+        variants={modalVariant}
+        transition={{
+          duration: 0.45,
+          type: "spring",
+          bounce: 0.5,
+        }}
+        className="absolute inset-0 flex justify-center items-center z-50">
         <div className="brd p-5">
           <form
             className="w-96 flex flex-col gap-5"
@@ -39,7 +50,9 @@ const LettersWriteModal = ({ handleCloseModal }) => {
               />
             </div>
             <div>
-            { errors.content && <p className="text-red-500 font-semibold">Requerido*</p> }
+              {errors.content && (
+                <p className="text-red-500 font-semibold">Requerido*</p>
+              )}
               <textarea
                 className="brd w-full p-1 resize-y outline-none"
                 placeholder="Contenido"
@@ -61,7 +74,7 @@ const LettersWriteModal = ({ handleCloseModal }) => {
             </div>
           </form>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
