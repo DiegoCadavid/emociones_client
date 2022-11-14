@@ -14,7 +14,7 @@ const ErrorPage = () => {
       </p>
 
       <br />
-      <Link to="/home" className="text-primary-100 underline">Inicio</Link>
+      <Link to="/home" className="btn">Inicio</Link>
     </div>
   );
 };
